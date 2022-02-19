@@ -1,6 +1,6 @@
-package dev.joa.doodledoodlebackend.member.repository;
+package dev.joa.doodledoodlebackend.repository.member;
 
-import dev.joa.doodledoodlebackend.member.domain.Member;
+import dev.joa.doodledoodlebackend.domain.member.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

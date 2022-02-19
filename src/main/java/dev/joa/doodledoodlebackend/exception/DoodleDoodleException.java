@@ -1,4 +1,4 @@
-package dev.joa.doodledoodlebackend.common.exception;
+package dev.joa.doodledoodlebackend.exception;
 
 public class DoodleDoodleException extends RuntimeException {
 

@@ -1,6 +1,5 @@
-package dev.joa.doodledoodlebackend.member.domain;
+package dev.joa.doodledoodlebackend.domain.member;
 
-import dev.joa.doodledoodlebackend.common.entity.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,9 +9,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Member extends BaseEntity {
+public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
     private Long id;
 
@@ -24,5 +24,4 @@ public class Member extends BaseEntity {
 
     @Column(nullable = false)
     private String password;
-
 }

@@ -1,7 +1,7 @@
-package dev.joa.doodledoodlebackend.member.controller;
+package dev.joa.doodledoodlebackend.controller.member;
 
-import dev.joa.doodledoodlebackend.member.domain.Member;
-import dev.joa.doodledoodlebackend.member.service.MemberService;
+import dev.joa.doodledoodlebackend.domain.member.Member;
+import dev.joa.doodledoodlebackend.service.member.MemberService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

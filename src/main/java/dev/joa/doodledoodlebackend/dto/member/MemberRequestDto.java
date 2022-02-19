@@ -1,6 +1,6 @@
-package dev.joa.doodledoodlebackend.member.dto;
+package dev.joa.doodledoodlebackend.dto.member;
 
-import dev.joa.doodledoodlebackend.member.domain.Member;
+import dev.joa.doodledoodlebackend.domain.member.Member;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

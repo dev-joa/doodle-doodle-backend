@@ -1,7 +1,7 @@
-package dev.joa.doodledoodlebackend.member.service;
+package dev.joa.doodledoodlebackend.service.member;
 
-import dev.joa.doodledoodlebackend.member.domain.Member;
-import dev.joa.doodledoodlebackend.member.dto.MemberRequestDto;
+import dev.joa.doodledoodlebackend.domain.member.Member;
+import dev.joa.doodledoodlebackend.dto.member.MemberRequestDto;
 
 public interface MemberService {
 

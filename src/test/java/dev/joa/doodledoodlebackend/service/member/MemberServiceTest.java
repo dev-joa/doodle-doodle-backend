@@ -1,9 +1,9 @@
-package dev.joa.doodledoodlebackend.member.service;
+package dev.joa.doodledoodlebackend.service.member;
 
-import dev.joa.doodledoodlebackend.common.exception.DoodleDoodleException;
-import dev.joa.doodledoodlebackend.member.domain.Member;
-import dev.joa.doodledoodlebackend.member.dto.MemberRequestDto;
-import dev.joa.doodledoodlebackend.member.repository.MemberRepository;
+import dev.joa.doodledoodlebackend.domain.member.Member;
+import dev.joa.doodledoodlebackend.dto.member.MemberRequestDto;
+import dev.joa.doodledoodlebackend.exception.DoodleDoodleException;
+import dev.joa.doodledoodlebackend.repository.member.MemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;

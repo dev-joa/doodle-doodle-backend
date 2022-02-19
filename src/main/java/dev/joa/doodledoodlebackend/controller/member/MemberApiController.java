@@ -1,13 +1,14 @@
-package dev.joa.doodledoodlebackend.member.controller;
+package dev.joa.doodledoodlebackend.controller.member;
 
-import dev.joa.doodledoodlebackend.common.api.BaseResponse;
-import dev.joa.doodledoodlebackend.member.domain.Member;
-import dev.joa.doodledoodlebackend.member.dto.MemberRequestDto;
-import dev.joa.doodledoodlebackend.member.dto.MemberResponseDto;
-import dev.joa.doodledoodlebackend.member.service.MemberService;
+import dev.joa.doodledoodlebackend.domain.common.BaseResponse;
+import dev.joa.doodledoodlebackend.domain.member.Member;
+import dev.joa.doodledoodlebackend.dto.member.MemberRequestDto;
+import dev.joa.doodledoodlebackend.dto.member.MemberResponseDto;
+import dev.joa.doodledoodlebackend.service.member.MemberService;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,9 +32,9 @@ public class MemberApiController {
      */
     @Operation(summary = "유저 회원 가입", description = "회원 가입")
     @PostMapping
-    public BaseResponse joinMember(@Valid @RequestBody MemberRequestDto member) {
+    public BaseResponse<MemberResponseDto> joinMember(@Valid @RequestBody MemberRequestDto member) {
         Member joinedMember = memberService.joinMember(member);
-        return new BaseResponse<>(new MemberResponseDto(joinedMember));
-    }
 
+        return new BaseResponse<>(HttpStatus.CREATED, new MemberResponseDto(joinedMember));
+    }
 }

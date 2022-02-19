@@ -1,9 +1,9 @@
-package dev.joa.doodledoodlebackend.member.service;
+package dev.joa.doodledoodlebackend.service.member;
 
-import dev.joa.doodledoodlebackend.common.exception.DoodleDoodleException;
-import dev.joa.doodledoodlebackend.member.domain.Member;
-import dev.joa.doodledoodlebackend.member.dto.MemberRequestDto;
-import dev.joa.doodledoodlebackend.member.repository.MemberRepository;
+import dev.joa.doodledoodlebackend.domain.member.Member;
+import dev.joa.doodledoodlebackend.dto.member.MemberRequestDto;
+import dev.joa.doodledoodlebackend.exception.DoodleDoodleException;
+import dev.joa.doodledoodlebackend.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,12 +13,12 @@ import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
+@Transactional
 @Service
 public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Transactional
     @Override
     public Member joinMember(MemberRequestDto memberDto) {
         Member member = memberDto.toMember();

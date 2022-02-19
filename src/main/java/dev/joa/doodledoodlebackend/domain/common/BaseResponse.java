@@ -1,4 +1,4 @@
-package dev.joa.doodledoodlebackend.common.api;
+package dev.joa.doodledoodlebackend.domain.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

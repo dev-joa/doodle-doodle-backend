@@ -1,9 +1,10 @@
-package dev.joa.doodledoodlebackend.common.exception.handler;
+package dev.joa.doodledoodlebackend.exception.handler;
 
-import dev.joa.doodledoodlebackend.common.api.BaseResponse;
-import dev.joa.doodledoodlebackend.common.exception.DoodleDoodleException;
+import dev.joa.doodledoodlebackend.domain.common.BaseResponse;
+import dev.joa.doodledoodlebackend.exception.DoodleDoodleException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -25,7 +26,7 @@ public class ExceptionAdvice {
             MethodArgumentNotValidException.class
     })
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public BaseResponse handleInvalidRequestException(Exception exception) {
+    public BaseResponse<String> handleInvalidRequestException(Exception exception) {
         String message = exception.getMessage();
 
         if (exception instanceof BindException) {
@@ -36,7 +37,8 @@ public class ExceptionAdvice {
         }
 
         exceptionLogging(exception);
-        return new BaseResponse(HttpStatus.BAD_REQUEST, message);
+
+        return new BaseResponse<>(HttpStatus.BAD_REQUEST, message);
     }
 
     /**
@@ -47,9 +49,10 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(DoodleDoodleException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public BaseResponse handleDoodleDoodleException(Exception exception) {
+    public BaseResponse<String> handleDoodleDoodleException(Exception exception) {
         exceptionLogging(exception);
-        return new BaseResponse(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+
+        return new BaseResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
     }
 
     private void exceptionLogging(Exception exception) {
