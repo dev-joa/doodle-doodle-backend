@@ -35,3 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### 로그 파일 ###
+logs
+
+### 환경 설정 ###
+src/main/resources-real/application.yml
