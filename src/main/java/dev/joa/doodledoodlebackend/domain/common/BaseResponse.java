@@ -51,7 +51,7 @@ public class BaseResponse<T> {
         }
 
         public void setIsSuccessful() {
-            isSuccessful = resultCode == HttpStatus.OK.value();
+            isSuccessful = (resultCode == HttpStatus.OK.value()) || (resultCode == HttpStatus.CREATED.value());
         }
     }
 }

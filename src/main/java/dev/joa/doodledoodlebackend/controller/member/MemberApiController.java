@@ -2,8 +2,8 @@ package dev.joa.doodledoodlebackend.controller.member;
 
 import dev.joa.doodledoodlebackend.domain.common.BaseResponse;
 import dev.joa.doodledoodlebackend.domain.member.Member;
-import dev.joa.doodledoodlebackend.dto.member.MemberRequestDto;
-import dev.joa.doodledoodlebackend.dto.member.MemberResponseDto;
+import dev.joa.doodledoodlebackend.dto.member.join.MemberRequestDto;
+import dev.joa.doodledoodlebackend.dto.member.join.MemberResponseDto;
 import dev.joa.doodledoodlebackend.service.member.MemberService;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;

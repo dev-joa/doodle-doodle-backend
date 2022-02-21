@@ -1,4 +1,4 @@
-package dev.joa.doodledoodlebackend.dto.member;
+package dev.joa.doodledoodlebackend.dto.member.join;
 
 import dev.joa.doodledoodlebackend.domain.member.Member;
 import lombok.Getter;
