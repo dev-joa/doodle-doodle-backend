@@ -6,7 +6,7 @@
     <property name="CONSOLE_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %clr(%-5p) %clr([%15.15t]){magenta} %clr([%-40.40C{39}.%-20.-20M:%4L]){blue} %m%n%wEx" />
     <property name="FILE_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%15.15t] %-40.40C{39}:%4L - %m%n%wEx" />
 
-    <property name="LOG_DIR" value="/app/backup" />
+    <property name="LOG_DIR" value="/home/ec2-user/app/backup" />
     <property name="LOG_PATH_NAME" value="${LOG_DIR}/doodle-doodle" />
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
